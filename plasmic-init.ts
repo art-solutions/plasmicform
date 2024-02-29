@@ -1,10 +1,15 @@
+/** @format */
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
+import Stars from "./components/Stars";
+import Embed from "./components/Embed";
+import Slider from "./components/Slider";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
     {
       id: "gbmXZkkGAqY8wGTZnNei41",
-      token: "VbwYfpQ6aeb96mv4gMhfyQmHHxlS2dBxmU227GfzvMCdJxToHOsnriS4WlI1epoJrXms0s9ys6DZ3c2P1zg",
+      token:
+        "VbwYfpQ6aeb96mv4gMhfyQmHHxlS2dBxmU227GfzvMCdJxToHOsnriS4WlI1epoJrXms0s9ys6DZ3c2P1zg",
     },
   ],
 
@@ -12,7 +17,7 @@ export const PLASMIC = initPlasmicLoader({
   // For development, you can set preview to true, which will use the unpublished
   // project, allowing you to see your designs without publishing.  Please
   // only use this for development, as this is significantly slower.
-  preview: false,
+  preview: true,
 });
 
 // You can register any code components that you want to use here; see
@@ -22,4 +27,16 @@ export const PLASMIC = initPlasmicLoader({
 // http://localhost:3000/plasmic-host).  See
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
-// PLASMIC.registerComponent(...);
+PLASMIC.registerComponent(Stars, {
+  name: "Stars",
+  props: {},
+});
+PLASMIC.registerComponent(Embed, {
+  name: "Embed",
+  props: {},
+});
+
+PLASMIC.registerComponent(Slider, {
+  name: "Embed",
+  props: {},
+});
